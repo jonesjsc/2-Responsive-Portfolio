@@ -9,3 +9,4 @@ clickable nav links
 and 1200px
 <a href='https://pngtree.com/free-backgrounds'>free background photos from pngtree.com</a>
 https://dummyimage.com/
+https://coolors.co/
