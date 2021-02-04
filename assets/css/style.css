@@ -11,7 +11,10 @@
 * {
   box-sizing: border-box;
   /* border: dashed red 1px;*/
-  font-size: 2vw;
+  font-size: 1em;
+  /* border-style: dashed;
+  border-color: red;
+  border-width: 1px; */
 }
 
 
@@ -23,9 +26,9 @@ body {
 .portfolio-section {
     display: flex;
     flex-flow: row;
-    margin-top: 20px;
-    padding-right:5vw;
-    padding-left: 5vw;
+    margin-top: 2em;
+    padding-right: 3em;
+    padding-left: 3em;
 }
 
 .col {
@@ -54,11 +57,13 @@ body {
 
 
 .work-featured {
+  display: flex;
+  position:relative;
   flex-basis: 100%;
   border-color: var(--ash-gray);
   border-style: solid;
-  border-width: 5px;
-  margin: 5px 5px;
+  border-width: .5em;
+  margin: .5em .5em;
 }
 
 .work-lessor {
@@ -67,11 +72,13 @@ body {
 }
 
 .work-lessor-item {
+  display: flex;
+  position: relative;
   flex-basis: 50%; 
   border-color: var(--ash-gray);
   border-style: solid;
-  border-width: 5px;
-  margin: 5px 5px;
+  border-width: .5em;
+  margin: .5em .5em;
 }
 
 .contact-row {
@@ -87,14 +94,14 @@ body {
   white-space: nowrap;
   overflow: hidden;
   justify-content: center;
-  font-size: 16px;
+  font-size: 1.2em;
 }
 
 .portfolio-area-1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 .portfolio-area-n {
@@ -141,12 +148,12 @@ body {
 .nav-element {
   display: flex;
   justify-content: center;
-  padding: 6px 6px;
-  margin: 12px 6px 12px 0px;
+  padding: .5em .5em;
+  margin: 1em .5em 1em 0em;
   color: var(--ash-gray);
   text-decoration: none;
   border-bottom-style:solid;
-  font-size: 18px;
+  font-size: 1.2em;
 }
 
 .hero-banner {
@@ -165,25 +172,27 @@ body {
   z-index: 10;
   position: absolute;
   right: 10%;
-  bottom: 30px;
+  bottom: 10%;
   font-weight: bold;
-  font-size: 21px;
+  font-size: 1.5em;
 }
 
 .nav-bar-label {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 20%;
+    width: 25%;
     background-color:var(--ash-gray);
-    padding: 9px 15px;
+    padding: .5em 1em;
     color: var(--davys-grey);
     z-index:10;
     position: absolute;
-    left: 0px;
-    top: 7px;
+    left: 0em;
+    top: .6em;
+    /* left: 0em; */
+    /* top: .5em; */
     /*top:6px;*/
-    font-size: 27px;
+    font-size: 1.5em;
     font-weight: bold;
 }
 .hero-image > img {
@@ -202,29 +211,58 @@ body {
   height: auto;
 }
 
-@media screen 
-  and (max-width: 950px) { /* just adjusting my label to make it still fit on the navbar */ 
+.work-label {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: var(--ash-gray);
+  padding: .5em 1em;
+  color: var(--davys-grey);
+  z-index:10;
+  position:absolute;  
+  /* bottom: 0px; */
+  bottom: 10%;
+}
+
+.work-label-title {
+  font-size: large;
+  font-weight: bold;
+}
+
+.work-label-subtitle {
+  font-size: small;
+}
+
+
+/* @media screen 
+  and (max-width: 950px) { 
     .nav-bar-label {
-      font-size: 2.7vw;  
+      font-size: 2em;  
       top: 10px;  
   }
-}
+}  */
 
 @media screen 
   and (max-width: 768px) { /* for mobile devices */
-    .nav-bar-label {
-      font-size: 2.7vw;  
-      top: 10px;  
-  }
+    /* .nav-bar-label {
+      font-size: 2em;  
+      top: .5em;  
+  } */
     .portfolio-section {
       flex-direction:column;
     }
     .portfolio-header {
       text-align: left;
-      flex: 0 0 15px;
-      justify-content: center;
-  border-bottom:var(--davys-grey);
-  border-bottom: solid;
-  border-right: none;
+      flex: 0 0 1em;
+      justify-content: flex-start;
+      border-bottom:var(--davys-grey);
+      border-bottom: solid;
+      border-right: none;
+      margin-bottom: 1em;
+    }
+    .portfolio-block {
+      flex-basis: 0;
+      /* margin-right: 2em; */
     }
 }
