@@ -28,11 +28,14 @@ a:visited {
 body {
   display: flex;
   flex-direction: column;
+  padding-bottom: 2em;
 }
 
 .col {
   flex: 1;
 }
+
+/* styling related to the navigation bar */
 
 .nav-bar {
   display: flex;
@@ -56,6 +59,24 @@ body {
 .nav-buttons {
   display: flex;
 }
+
+.nav-bar-label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+  background-color:var(--ash-gray);
+  padding: .5em 1em;
+  color: var(--davys-grey);
+  z-index:10;
+  position: absolute;
+  left: 0em;
+  top: .6em;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+/* styling related to the graphic banner */
 
 .hero-banner {
   display: flex;
@@ -83,24 +104,7 @@ body {
   opacity: 0.5;
 }
 
-.nav-bar-label {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 25%;
-    background-color:var(--ash-gray);
-    padding: .5em 1em;
-    color: var(--davys-grey);
-    z-index:10;
-    position: absolute;
-    left: 0em;
-    top: .6em;
-    /* left: 0em; */
-    /* top: .5em; */
-    /*top:6px;*/
-    font-size: 1.5em;
-    font-weight: bold;
-}
+/* stlying related to the main body of the page */
 
 .portfolio-section {
     display: flex;
@@ -174,7 +178,12 @@ body {
   height: auto;
 }
 
-.work-lessor-item > img {
+#work-featured {
+  max-width: 100%;
+  height: auto;
+}
+
+.work-lessor-item > img > a {
   max-width: 100%;
   height: auto;
 }
@@ -210,19 +219,21 @@ body {
 
 .contact-item {
   display: flex;
-  align-items:center;
-  font-family:Arial, Helvetica, sans-serif;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
   white-space: nowrap;
   overflow: hidden;
   justify-content: center;
   font-size: 1.2em;
 }
 
+/* on smaller screens lets switch to flex-direction: column plus some formatting */
+
 @media screen 
   and (max-width: 768px) { 
 
     .portfolio-section {
-      flex-direction:column;
+      flex-direction: column;
     }
     
     .portfolio-header {
