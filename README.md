@@ -8,6 +8,7 @@ The primary objectives of this exercise were to demonstrat the use of the follow
 * flexbox
 * media queries
 * CSS variables
+* testing signed commits
 
 # References / resources 
 
